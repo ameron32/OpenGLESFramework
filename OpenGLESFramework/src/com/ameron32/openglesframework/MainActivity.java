@@ -1,15 +1,19 @@
 package com.ameron32.openglesframework;
 
 import android.os.Bundle;
+
 import android.app.Activity;
 import android.view.Menu;
+import android.opengl.GLSurfaceView;
 
 public class MainActivity extends Activity {
 
+	GLSurfaceView glSurface;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		glSurface = new GLSurfaceView(this);		
+		setContentView(glSurface);
 	}
 
 	@Override
